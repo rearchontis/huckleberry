@@ -1,6 +1,26 @@
 * {
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
+
+  --small-s-size: 8px;
+  --small-m-size: 16px;
+  --small-x-size: 24px;
+
+  --medium-s-size: 32px;
+  --medium-m-size: 48px;
+  --medium-x-size: 64px;
+
+  --large-m-size: 96px;
+  --large-x-size: 128px;
+
+  --border-height: var(--small-s-size);
+  --border-style: solid;
+
+  --accent-color: #009966;
+  --main-bg-color: #666666;
+  --main-border-color: #999999;
+  --banner-bg-color: #ffbf00;
+  --banner-border-color: #cc9900;
 }
 
 html,
@@ -10,3 +30,73 @@ body {
 }
 
 /* Add styles here! */
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 3rem;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.intro-chunk {
+  max-width: 415px;
+  padding-top: var(--large-m-size);
+  padding-bottom: var(--medium-x-size);
+  padding-inline: var(--small-x-size);
+}
+
+.intro-chunk>.title {
+  margin-bottom: var(--medium-m-size);
+}
+
+.intro-chunk>p {
+  margin-bottom: var(--small-m-size);
+  text-wrap: balanced;
+}
+
+.intro-chunk strong {
+  color: var(--accent-color);
+}
+
+.intro-chunk>p:last-child {
+  margin-bottom: 0px;
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin-block: 0;
+  margin-inline: auto;
+}
+
+main {
+  border-top: var(--border-height) var(--border-style) var(--main-border-color);
+  background-color: var(--main-bg-color);
+  padding-block: var(--medium-x-size);
+}
+
+.card {
+  background-color: #ffffff;
+  border-bottom: var(--border-height) var(--border-style) var(--main-border-color);
+  padding: var(--small-x-size);
+}
+
+.card>p:last-child {
+  margin-bottom: 0px;
+}
+
+.indented-heading {
+  background-color: var(--banner-bg-color);
+  border-bottom: var(--border-height) var(--border-style) var(--banner-border-color);
+  width: fit-content;
+  padding: var(--small-m-size) var(--medium-s-size);
+  margin-top: calc(var(--small-m-size) * -1);
+  margin-left: calc(var(--medium-s-size) * -1);
+  margin-bottom: 1rem;
+}
